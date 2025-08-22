@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CrowdShield Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; height: 100vh; margin: 0; }
+        .video-container { flex: 2; padding: 20px; text-align: center; }
+        .data-container { flex: 1; padding: 20px; background-color: #f0f0f0; border-left: 1px solid #ccc; }
+        h1, h2 { color: #333; }
+        #data { font-size: 2em; font-weight: bold; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <div class="video-container">
+        <h1>Live AI Feed</h1>
+        <img src="{{ url_for('video_feed') }}" width="800">
+    </div>
+
+    <div class="data-container">
+        <h2>Real-time Data</h2>
+        <p id="data"></p>
+    </div>
+
+    <script>
+        // Simple polling to get data from the server every second.
+        function fetchData() {
+            fetch('/data')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('data').innerText = data;
+                });
+        }
+        setInterval(fetchData, 1000); // Fetch data every 1 second
+    </script>
+
+</body>
+</html>

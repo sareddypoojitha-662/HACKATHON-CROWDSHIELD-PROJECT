@@ -1,0 +1,15 @@
+Steps to create your own GitHub repository:
+
+1. Go to https://github.com and sign in
+2. Click "+" in top right corner → "New repository"
+3. Repository name: "crowdshield" (or any name you prefer)
+4. Description: "AI-Powered People Counting System"
+5. Make it Public
+6. Don't initialize with README (we already have one)
+7. Click "Create repository"
+
+8. Then run these commands:
+   git remote add origin https://github.com/YOUR_USERNAME/crowdshield.git
+   git push -u origin main
+
+Replace YOUR_USERNAME with your actual GitHub username.

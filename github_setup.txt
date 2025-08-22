@@ -1,0 +1,11 @@
+GitHub Setup Commands:
+
+1. Go to github.com and create a new repository named "crowdshield"
+
+2. Run these commands in your terminal:
+
+git remote add origin https://github.com/YOUR_USERNAME/crowdshield.git
+git branch -M main
+git push -u origin main
+
+Replace YOUR_USERNAME with your actual GitHub username.
